@@ -6,12 +6,12 @@ import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 public class Utility {
-    static CollectionReference getCollectionReference(){
+    public static CollectionReference getCollectionReference() {
         FirebaseUser currentUser= FirebaseAuth.getInstance().getCurrentUser();
-        return FirebaseFirestore.getInstance().collection("notes")
-                .document(currentUser.getUid()).collection("my_notes");
+        return FirebaseFirestore.getInstance().collection("Location")
+                .document("4").collection("cities");
     }
-    static CollectionReference getCollectionReferenceForNotes() {
+    public static CollectionReference getCollectionReferenceForNotes(){
         FirebaseUser curr = FirebaseAuth.getInstance().getCurrentUser();
         return FirebaseFirestore.getInstance().collection("notes")
                 .document("2").collection("mynotes");

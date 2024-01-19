@@ -29,7 +29,8 @@ public class MainActivity3 extends AppCompatActivity {
         recyclerView=findViewById(R.id.recyclerview);
         menu=findViewById(R.id.menu1);
         plus.setOnClickListener((v) -> startActivity(new Intent(MainActivity3.this,MainActivity2.class)));
-        menu.setOnClickListener((v)->show());
+//        menu.setOnClickListener((v)->show());
+        menu.setOnClickListener((v)->startActivity(new Intent(MainActivity3.this,Setting.class)));
         setupRecyclerView();
     }
     void show(){}

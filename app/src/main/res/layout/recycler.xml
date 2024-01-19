@@ -4,37 +4,53 @@
     android:orientation="vertical"
     android:padding="12dp"
     android:layout_marginVertical="8dp"
-    android:backgroundTint="#f5f5f5"
+    android:layout_marginHorizontal="8dp"
+    android:backgroundTint="#272727"
     android:background="@drawable/rounded"
     android:id="@+id/recycle"
     android:layout_height="wrap_content">
-
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="add note"
+        android:textColor="@color/white"
+        android:id="@+id/contenttext"
+        android:textSize="18sp"/>
+        <Switch
+            android:id="@+id/switch2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:switchMinWidth="56dp"
+            android:ellipsize="end"
+            android:checked="true"
+            android:textOff="OFF"
+            android:textOn="ON"/>
+    </LinearLayout>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="add note"
-        android:textColor="@color/black"
-        android:id="@+id/titletext"
-        android:textSize="18sp"
-        android:layout_marginVertical="4dp"/>
+        android:text="date"
+        android:gravity="left"
+        android:layout_marginTop="5dp"
+        android:textStyle="bold"
+        android:textSize="12sp"
+        android:layout_marginVertical="4sp"
+        android:id="@+id/timeStamp"/>
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="content"
         android:maxLines="4"
         android:gravity="right"
-        android:id="@+id/contenttext"
+        android:id="@+id/titletext"
         android:ellipsize="end"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="12sp"
         android:layout_marginVertical="4dp"/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="date"
-        android:gravity="right"
-        android:textSize="12sp"
-        android:layout_marginVertical="4sp"
-        android:id="@+id/timeStamp"/>
 
 </LinearLayout>
