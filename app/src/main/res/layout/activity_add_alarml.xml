@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:context=".AddAlarml">
+    <RelativeLayout
+        android:id="@+id/titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageButton
+            android:layout_width="53dp"
+            android:layout_height="49dp"
+            android:layout_alignParentEnd="false"
+            android:src="@drawable/baseline_arrow_back_ios_24"/>
+        <TextView
+            android:id="@+id/hello"
+            android:layout_width="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="9dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-black"
+            android:text="Add Location"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+        <ImageButton
+            android:id="@+id/menu1"
+            android:layout_width="53dp"
+            android:layout_height="49dp"
+            android:layout_alignParentEnd="true"
+            app:tint="#FF0000"
+            android:layout_centerVertical="true"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/baseline_done_24" />
+    </RelativeLayout>
+    <EditText
+        android:id="@+id/titleET"
+        android:layout_below="@id/titlebar"
+        android:layout_width="match_parent"
+        android:layout_marginTop="258dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter the Location for an reminder task " />
+    <Button
+        android:id="@+id/cancelButton"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="Cancel Alarms"/>
+</RelativeLayout>
